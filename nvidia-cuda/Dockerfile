@@ -2,7 +2,7 @@ FROM nvidia/cuda:10.1-base-ubuntu16.04
 
 # install golang
 
-ENV PATH=/usr/lib/go-1.10/bin:$PATH
+ENV PATH=/usr/lib/go-1.10/bin:/go/bin/:$PATH
 
 ENV GOPATH=/go
 
