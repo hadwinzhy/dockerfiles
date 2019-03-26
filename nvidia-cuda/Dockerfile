@@ -2,9 +2,9 @@ FROM nvidia/cuda:10.1-base-ubuntu16.04
 
 # install golang
 
-RUN export PATH=/usr/lib/go-1.10/bin:$PATH
+ENV PATH=/usr/lib/go-1.10/bin:$PATH
 
-RUN export GOPATH=/go
+ENV GOPATH=/go
 
 COPY utils/ubuntu16.04/sources.list /etc/apt/sources.list
 
