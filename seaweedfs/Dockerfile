@@ -1,6 +1,7 @@
 FROM chrislusf/seaweedfs
 
-VOLUME /var/seaweedfs_config/public_ip_address
+# try to add file: public_ip_address
+VOLUME /var/seaweedfs_config
 
 ##### install third-party packages #####
 
@@ -10,12 +11,10 @@ RUN apk add --no-cache vim
 
 ##### set environments #####
 
-RUN mkdir -p /var/seaweedfs_config/
-
 COPY ./seaweedfs/set_public_ip.sh /
 
 RUN chmod 777 /set_public_ip.sh
 
 ##### RUN #####
 
-ENTRYPOINT [ "/set_pubic_ip.sh && ./entrypoint.sh" ]
+ENTRYPOINT [ "sh", "-c", "/set_pubic_ip.sh; /entrypoint.sh" ]
