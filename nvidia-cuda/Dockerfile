@@ -6,6 +6,8 @@ ENV PATH=/usr/lib/go-1.10/bin:/go/bin/:$PATH
 
 ENV GOPATH=/go
 
+##### install third-party packages #####
+
 COPY utils/ubuntu16.04/sources.list /etc/apt/sources.list
 
 RUN rm -rvf /etc/apt/sources.list.d
