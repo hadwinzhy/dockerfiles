@@ -11,10 +11,6 @@ RUN apk add --no-cache vim
 
 ##### set environments #####
 
-COPY ./seaweedfs/set_public_ip.sh /
+COPY ./seaweedfs/entrypoint.sh /
 
-RUN chmod 777 /set_public_ip.sh
-
-##### RUN #####
-
-ENTRYPOINT [ "sh", "-c", "/set_pubic_ip.sh; /entrypoint.sh" ]
+RUN chmod 777 /entrypoint.sh
