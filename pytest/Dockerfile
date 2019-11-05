@@ -8,7 +8,7 @@ COPY utils/python/pip.conf /etc/pip.conf
 
 WORKDIR /app
 
-RUN apt-get update && apt-get install vim && apt-get clean
+RUN apt-get update && apt-get install -y vim && apt-get clean
 
 RUN pip install pytest==3.7.0
 
