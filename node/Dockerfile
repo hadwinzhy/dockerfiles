@@ -1,4 +1,4 @@
-FROM node:13-alpine
+FROM node:12-alpine
 
 ENV SASS_BINARY_SITE https://npm.taobao.org/mirrors/node-sass/
 
